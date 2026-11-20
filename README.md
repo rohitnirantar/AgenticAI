@@ -129,7 +129,7 @@ Create a `.env` file from the example template:
 ```bash
 cp .env.example .env
 ```
-Add your model API keys (e.g., `OPENAI_API_KEY`, `GEMINI_API_KEY`, `ANTHROPIC_API_KEY`) inside `.env`.
+Add your model API keys (e.g., `OPENAI_API_KEY`, `GOOGLE_API_KEY`, `OPENROUTER_API_KEY`) inside `.env`.
 
 ### 5. Run your first agent
 ```bash

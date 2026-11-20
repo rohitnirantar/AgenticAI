@@ -1,0 +1,48 @@
+# AI Agents Bootcamp - Compatible Requirements
+# Compatible with your existing langflow==1.2.0 and langchain==0.3.10
+
+python-dotenv==1.0.1             # For loading environment variables
+langflow
+langchain  
+openai
+jupyter
+ipykernel              
+langchain-core
+langchain-community
+sentence-transformers
+huggingface-hub
+langchain-huggingface
+# =============================================================================
+# LLM PROVIDER INTEGRATIONS (COMPATIBLE VERSIONS)
+# =============================================================================
+
+# OpenAI (already have openai==1.68.2, adding LangChain integration)
+langchain-openai
+
+# Anthropic Claude
+langchain-anthropic
+anthropic                # Core Anthropic SDK
+
+# Google Gemini  
+langchain_google_genai
+langchain-google-genai
+google-generativeai      # Core Google SDK
+
+# Groq (Ultra-fast inference)
+langchain-groq>=0.2.0,<0.3.0
+groq                      # Core Groq SDK
+
+# Mistral
+langchain-mistralai
+mistralai                # Core Mistral SDK
+
+# Ollama (Local models - your DeepSeek R1!)
+langchain-ollama
+
+# =============================================================================
+# UTILITIES & DISPLAY (COMPATIBLE VERSIONS)
+# =============================================================================
+requests               # HTTP requests (for Ollama health checks)
+rich                     # Beautiful terminal output
+pandas                   # Data manipulation
+numpy                   # Numerical computing
