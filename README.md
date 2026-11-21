@@ -37,12 +37,13 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 
 ## 🎯 What You Will Learn
 
-- **Core Principles**: ReAct loops, planning, self-reflection, and decision-making logic.
-- **Tool Use & Function Calling**: Integrating APIs, databases, web scraping, and code execution.
-- **Memory Systems**: Short-term conversational context vs. long-term semantic retrieval (Vector DBs).
-- **Multi-Agent Orchestration**: Building collaborative agent swarms and supervisor-worker hierarchies.
-- **Evaluation & Guardrails**: Preventing hallucinations, detecting prompt injections, and benchmarking accuracy.
-- **Production Deployment**: Containerizing agents with Docker, exposing endpoints via FastAPI, and setting up monitoring & tracing.
+- **Core Principles**: How LLM APIs work (roles, tokens, parameters, streaming) and how to build the agent loop yourself in plain Python.
+- **Tool Use & Function Calling**: Structured output, calling your own functions and real APIs, and keeping tools safe.
+- **Memory Systems**: Short-term conversation memory, embeddings, retrieval over your own documents (RAG), and long-term memory across sessions.
+- **Multi-Agent Orchestration**: Specialist agents, routers and handoffs, managers and workers, and writer and reviewer loops.
+- **Evaluation & Guardrails**: Defending against prompt injection and data leaks, limiting what agents can do, and measuring accuracy with evals.
+- **Agent Frameworks** *(coming)*: What frameworks give you, what they cost, and how LangGraph, CrewAI and the OpenAI Agents SDK compare.
+- **Production Deployment** *(coming)*: Containerizing agents with Docker, exposing endpoints via FastAPI, and setting up logging, cost tracking and tracing.
 
 ---
 
@@ -54,19 +55,20 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 | **02** | **[Tool Calling & Integrations](Tool%20Calling%20and%20Integrations/README_Concepts.md)** | Structured output, function calling, real API tools, and a hand-built agent loop | 
 | **03** | **[Agent Memory & Retrieval (RAG)](Agent%20Memory%20and%20Retrieval/README_Concepts.md)** | Short-term memory, embeddings, RAG over your own documents, and long-term memory across sessions | 
 | **04** | **[Multi-Agent Architectures](Multi-Agent%20Architectures/README_Concepts.md)** | Specialist agents, router and handoff, manager and workers, and writer and reviewer | 
-| **05** | **Agent Guardrails & Evals** | Input/output filtering, rate limiting, and evaluation benchmarks | 
-| **06** | **Production Deployment & Observability** | Dockerizing, FastAPI service, CI/CD, and live tracing |
+| **05** | **[Agent Guardrails & Evals](Agent%20Guardrails%20and%20Evals/README_Concepts.md)** | Input, tool and output guardrails, human approval, step and token budgets, test suites (evals), and LLM-as-judge | 
+| **06** | **Agent Frameworks** *(coming)* | Types of frameworks, why they exist, what they add and cost, with LangGraph, CrewAI and the OpenAI Agents SDK | 
+| **07** | **Production Deployment & Observability** *(coming)* | Dockerizing, FastAPI service, logging, cost tracking, and a live deployment |
+| **Capstone** | **One project, built in each framework** *(coming)* | The support desk rebuilt in each framework, scored with the same evals and compared |
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Language**: Python 3.10+
-- **Agent Frameworks**: LangChain / LangGraph, CrewAI, AutoGen
-- **LLM Providers**: OpenAI, Anthropic, Google Gemini, Ollama (Local LLMs)
-- **Vector Databases**: ChromaDB / Pinecone / Qdrant
-- **Observability & Tracing**: LangSmith / Phoenix / OpenTelemetry
-- **Deployment**: Docker, FastAPI, GitHub Actions, AWS / GCP / Fly.io
+- **Modules 01 to 05**: plain Python with the `openai` package, `pydantic` and `python-dotenv`. No agent framework is needed, so you see exactly how everything works.
+- **LLM Provider**: OpenAI (Module 01 also shows Gemini and OpenRouter calls)
+- **Agent Frameworks** *(Module 06 and the capstone)*: LangGraph, CrewAI, OpenAI Agents SDK
+- **Deployment and Observability** *(Module 07)*: Docker, FastAPI, structured logging, and a free-tier cloud host
 
 ---
 
@@ -75,7 +77,7 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 - Basic understanding of **Python** (functions, async, type hints).
 - Familiarity with basic **REST APIs** and JSON data.
 - Basic terminal and **Git** commands.
-- An API key for at least one major model provider (e.g., OpenAI, Anthropic, or Gemini) or a local LLM setup via Ollama.
+- An **OpenAI API key**. Modules 02 to 05 use only OpenAI. (Module 01 also shows how to call Gemini and OpenRouter.)
 
 ---
 
@@ -83,20 +85,17 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 
 ```text
 AgenticAI/
-├── modules/
-│   ├── 01_foundations/         # Core concepts & minimal agent from scratch
-│   ├── 02_tools_integration/   # Tool calling and custom APIs
-│   ├── 03_memory_and_rag/      # Memory buffers and Vector DB integration
-│   ├── 04_multi_agent_teams/   # Multi-agent collaboration patterns
-│   ├── 05_evals_and_safety/    # Guardrails and benchmark evaluations
-│   └── 06_production_deploy/   # Docker, FastAPI server, CI/CD configs
-├── capstone_project/           # End-to-end production-ready agent application
-├── notebooks/                  # Interactive Jupyter notebooks for quick experimentation
-├── tests/                      # Automated unit and integration tests
-├── .env.example                # Template for required environment variables
-├── requirements.txt            # Python dependencies
-└── README.md                   # You are here!
+├── Introduction to Agentic AI/     # Module 01: setup, API basics (notebook + concepts page)
+├── Tool Calling and Integrations/  # Module 02: structured output, tools, agent loop (+ real-life scripts)
+├── Agent Memory and Retrieval/     # Module 03: memory, embeddings, RAG (+ support assistant script)
+├── Multi-Agent Architectures/      # Module 04: router, manager, reviewer (+ support desk script)
+├── Agent Guardrails and Evals/     # Module 05: guardrails, evals, judges (+ guarded desk and eval scripts)
+├── .env.example                    # Template for required environment variables
+├── requirements.txt                # Python dependencies
+└── README.md                       # You are here!
 ```
+
+Every module folder has a `README_Concepts.md`. Read it first, then open the notebooks in order. Modules 06, 07 and the capstone will be added as they are finished.
 
 ---
 
@@ -131,20 +130,22 @@ cp .env.example .env
 ```
 Add your model API keys (e.g., `OPENAI_API_KEY`, `GOOGLE_API_KEY`, `OPENROUTER_API_KEY`) inside `.env`.
 
-### 5. Run your first agent
+### 5. Start learning, or run a complete example
+Start with the [Module 01 concepts page](Introduction%20to%20Agentic%20AI/README_Concepts.md), then open its notebook.
+
+Or jump straight to a working multi-agent support desk:
 ```bash
-python modules/01_foundations/basic_react_agent.py
+python "Multi-Agent Architectures/support_desk.py"
 ```
 
 ---
 
 ## 🏆 Capstone Project
 
-By the end of the course, you will build and deploy a **Production Autonomous Research & Action Agent**:
-- Capable of planning multi-step web searches and synthesis.
-- Validated with automated unit/safety tests and evals.
-- Packaged as a containerized FastAPI microservice.
-- Instrumented with real-time token tracing and observability in a live cloud environment.
+The course follows one online shop and its **customer support desk** from a single API call to a multi-agent system with guardrails. The capstone builds the same support desk **once in each popular framework** (LangGraph, CrewAI and the OpenAI Agents SDK), next to the plain-Python version from Module 04:
+- Every version is scored with the **same evals** from Module 05, so the comparison is based on measurements.
+- The comparison covers quality, cost, speed, and how much code each one needs.
+- The best fit is packaged as a containerized FastAPI service with logging and cost tracking in a live cloud environment.
 
 ---
 
