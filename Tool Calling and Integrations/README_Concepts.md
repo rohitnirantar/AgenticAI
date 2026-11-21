@@ -115,7 +115,14 @@ All five use only the OpenAI API and plain Python, with no extra frameworks.
 | 4 | [04_MultipleTools.ipynb](04_MultipleTools.ipynb) | Give the model three tools and let it choose |
 | 5 | [05_MiniAgentLoop.ipynb](05_MiniAgentLoop.ipynb) | Build a small agent that can use tools over several steps |
 
-Want it all in one place? [simple_agent.py](simple_agent.py) combines structured output, the three tools and the agent loop in a single script you can run with `python simple_agent.py`.
+Two Python scripts put it all together:
+
+| Script | What it is |
+|---|---|
+| [simple_agent.py](simple_agent.py) | The notebook examples (weather, date, percentage) combined in one short script |
+| [support_agent.py](support_agent.py) | **A real-life example.** A customer support assistant that reads an email, turns it into a ticket, looks up the order, checks the refund policy, issues a refund if allowed, and replies. Uses structured output, tools and the agent loop together. |
+
+Run either with `python <script name>`.
 
 **Setup:** the same as Module 01. You need `OPENAI_API_KEY` in your `.env` file (copy `.env.example` if you have not yet). Each notebook makes a handful of small calls, which costs a fraction of a cent.
 
