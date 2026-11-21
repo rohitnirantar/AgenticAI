@@ -50,8 +50,8 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 
 | Module | Topic | Description | 
 |---|---|---|
-| **01** | **Introduction to Agentic AI** | LLMs vs. Agents, Autonomous loops (ReAct, Reflexion, Plan-and-Solve) | 
-| **02** | **Tool Calling & External Integrations** | Function calling, API integration, and structured outputs (JSON schema) | 
+| **01** | **[Introduction to Agentic AI](Introduction%20to%20Agentic%20AI/README_Concepts.md)** | Setup, LLM API basics, message roles, memory, tokens and cost, parameters, streaming | 
+| **02** | **[Tool Calling & Integrations](Tool%20Calling%20and%20Integrations/README_Concepts.md)** | Structured output, function calling, real API tools, and a hand-built agent loop | 
 | **03** | **Agent Memory & Retrieval (RAG)** | Short-term buffer, summary memory, and vector-backed persistent store | 
 | **04** | **Multi-Agent Architectures** | Hierarchical teams, swarm patterns, and handoffs | 
 | **05** | **Agent Guardrails & Evals** | Input/output filtering, rate limiting, and evaluation benchmarks | 
