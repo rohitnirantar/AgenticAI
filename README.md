@@ -53,7 +53,7 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 | **01** | **[Introduction to Agentic AI](Introduction%20to%20Agentic%20AI/README_Concepts.md)** | Setup, LLM API basics, message roles, memory, tokens and cost, parameters, streaming | 
 | **02** | **[Tool Calling & Integrations](Tool%20Calling%20and%20Integrations/README_Concepts.md)** | Structured output, function calling, real API tools, and a hand-built agent loop | 
 | **03** | **[Agent Memory & Retrieval (RAG)](Agent%20Memory%20and%20Retrieval/README_Concepts.md)** | Short-term memory, embeddings, RAG over your own documents, and long-term memory across sessions | 
-| **04** | **Multi-Agent Architectures** | Hierarchical teams, swarm patterns, and handoffs | 
+| **04** | **[Multi-Agent Architectures](Multi-Agent%20Architectures/README_Concepts.md)** | Specialist agents, router and handoff, manager and workers, and writer and reviewer | 
 | **05** | **Agent Guardrails & Evals** | Input/output filtering, rate limiting, and evaluation benchmarks | 
 | **06** | **Production Deployment & Observability** | Dockerizing, FastAPI service, CI/CD, and live tracing |
 
