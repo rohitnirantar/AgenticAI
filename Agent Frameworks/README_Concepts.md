@@ -174,6 +174,6 @@ On macOS or Linux, activate it with `source venv-frameworks/bin/activate`. The v
 
 ---
 
-**Next: Module 07, Production Deployment & Observability.** Then the **capstone** puts the Module 05 guardrails and evals around the support desk in each framework and compares real numbers.
+**Next: Module 07, Production & Observability.** Then the **capstone** puts the Module 05 guardrails and evals around the support desk in each framework and compares real numbers.
 
 *Agentic AI: From Zero to Live Production · Module 06 · [Rohit Nirantar](https://github.com/rohitnirantar)*

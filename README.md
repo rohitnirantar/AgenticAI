@@ -6,7 +6,7 @@
 
 Welcome to **Agentic AI: From Zero to Live Production**! 
 
-This repository houses a comprehensive, hands-on curriculum that takes you from the foundational concepts of Agentic AI and autonomous systems all the way to architecting, evaluating, and deploying your first production-grade AI agent to the cloud.
+This repository houses a comprehensive, hands-on curriculum that takes you from the foundational concepts of Agentic AI and autonomous systems all the way to architecting, evaluating, and running your first production-ready AI agent as a real, observable service.
 
 ---
 
@@ -43,7 +43,7 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 - **Multi-Agent Orchestration**: Specialist agents, routers and handoffs, managers and workers, and writer and reviewer loops.
 - **Evaluation & Guardrails**: Defending against prompt injection and data leaks, limiting what agents can do, and measuring accuracy with evals.
 - **Agent Frameworks**: What frameworks give you, what they cost, and how the OpenAI Agents SDK, LangGraph and CrewAI compare on the same support desk.
-- **Production Deployment** *(coming)*: Containerizing agents with Docker, exposing endpoints via FastAPI, and setting up logging, cost tracking and tracing.
+- **Production & Observability**: Putting the agent behind a FastAPI service, making it reliable (retries, idempotency, budgets, fallbacks), tracing every request, tracking cost, speed and quality, alerts, and going live without Docker.
 
 ---
 
@@ -57,7 +57,7 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 | **04** | **[Multi-Agent Architectures](Multi-Agent%20Architectures/README_Concepts.md)** | Specialist agents, router and handoff, manager and workers, and writer and reviewer | 
 | **05** | **[Agent Guardrails & Evals](Agent%20Guardrails%20and%20Evals/README_Concepts.md)** | Input, tool and output guardrails, human approval, step and token budgets, test suites (evals), and LLM-as-judge | 
 | **06** | **[Agent Frameworks](Agent%20Frameworks/README_Concepts.md)** | Types of frameworks, why they exist, what they add and cost, with the OpenAI Agents SDK, LangGraph and CrewAI | 
-| **07** | **Production Deployment & Observability** *(coming)* | Dockerizing, FastAPI service, logging, cost tracking, and a live deployment |
+| **07** | **[Production & Observability](Production%20and%20Observability/README_Concepts.md)** | FastAPI service, reliability, structured logs and traces, cost, speed and quality metrics, alerts, closing the loop with evals, and going live without Docker |
 | **Capstone** | **One project, built in each framework** *(coming)* | The support desk rebuilt in each framework, scored with the same evals and compared |
 
 ---
@@ -68,7 +68,7 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 - **Modules 01 to 05**: plain Python with the `openai` package, `pydantic` and `python-dotenv`. No agent framework is needed, so you see exactly how everything works.
 - **LLM Provider**: OpenAI (Module 01 also shows Gemini and OpenRouter calls)
 - **Agent Frameworks** *(Module 06 and the capstone)*: OpenAI Agents SDK, LangGraph, CrewAI. They need their **own virtual environment** with pinned versions (see the Module 06 page).
-- **Deployment and Observability** *(Module 07)*: Docker, FastAPI, structured logging, and a free-tier cloud host
+- **Production & Observability** *(Module 07)*: FastAPI and uvicorn, with structured logging and tracing built by hand in plain Python (no Docker needed). Optional: OpenAI's own tracing dashboard.
 
 ---
 
@@ -91,12 +91,13 @@ AgenticAI/
 ├── Multi-Agent Architectures/      # Module 04: router, manager, reviewer (+ support desk script)
 ├── Agent Guardrails and Evals/     # Module 05: guardrails, evals, judges (+ guarded desk and eval scripts)
 ├── Agent Frameworks/               # Module 06: Agents SDK, LangGraph, CrewAI (+ its own requirements.txt)
+├── Production and Observability/   # Module 07: API service, reliability, tracing, metrics, alerts (+ service and ops scripts)
 ├── .env.example                    # Template for required environment variables
 ├── requirements.txt                # Python dependencies for Modules 01 to 05
 └── README.md                       # You are here!
 ```
 
-Every module folder has a `README_Concepts.md`. Read it first, then open the notebooks in order. Module 06 uses its own environment (`venv-frameworks`), because agent frameworks need different package versions. Module 07 and the capstone will be added as they are finished.
+Every module folder has a `README_Concepts.md`. Read it first, then open the notebooks in order. Module 06 uses its own environment (`venv-frameworks`), because agent frameworks need different package versions. Module 07 uses the main environment plus three small packages. The capstone will be added when it is finished.
 
 ---
 
@@ -123,7 +124,7 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-This covers Modules 01 to 05. **Module 06 (Agent Frameworks) needs its own environment**, with setup steps on its [concepts page](Agent%20Frameworks/README_Concepts.md#setup-a-separate-environment).
+This covers Modules 01 to 05. **Module 07** adds three small packages to the same environment (`pip install -r "Production and Observability/requirements.txt"`). **Module 06 (Agent Frameworks) needs its own environment**, with setup steps on its [concepts page](Agent%20Frameworks/README_Concepts.md#setup-a-separate-environment).
 
 ### 4. Configure environment variables
 Create a `.env` file from the example template:
@@ -147,7 +148,7 @@ python "Multi-Agent Architectures/support_desk.py"
 The course follows one online shop and its **customer support desk** from a single API call to a multi-agent system with guardrails. The capstone builds the same support desk **once in each popular framework** (LangGraph, CrewAI and the OpenAI Agents SDK), next to the plain-Python version from Module 04:
 - Every version is scored with the **same evals** from Module 05, so the comparison is based on measurements.
 - The comparison covers quality, cost, speed, and how much code each one needs.
-- The best fit is packaged as a containerized FastAPI service with logging and cost tracking in a live cloud environment.
+- Each version is wrapped in the Module 07 service, with tracing and cost tracking, so the comparison also covers what it costs to run and how easy it is to observe.
 
 ---
 

@@ -1,0 +1,35 @@
+# An EXAMPLE of a release gate: run the Module 05 evals automatically, and block the change if they fail.
+#
+# It is saved as .example on purpose, so it does NOT run on your repository by itself.
+# To switch it on:
+#   1. copy it to .github/workflows/evals.yml at the ROOT of your repository
+#   2. in GitHub: Settings > Secrets and variables > Actions > New repository secret, name it OPENAI_API_KEY
+#   3. check that the versions of the actions below are still current
+#
+# Every run makes about 100 small model calls (a few cents).
+
+name: Desk evals
+
+on:
+  pull_request:
+    paths:
+      - "Production and Observability/**"
+  workflow_dispatch:   # also lets you start it by hand from the Actions tab
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install the dependencies
+        run: pip install -r "Production and Observability/requirements.txt"
+
+      - name: Run the evals (the script exits with an error if the pass rate is below its threshold)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python "Production and Observability/run_evals.py"

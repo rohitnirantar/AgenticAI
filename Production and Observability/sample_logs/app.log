@@ -1,0 +1,104 @@
+{"time": "2026-11-22T19:06:48+00:00", "level": "INFO", "event": "request_finished", "request_id": "9337fe141c06", "status": "ok", "duration_ms": 5128, "model_calls": 6, "cost_usd": 0.001321}
+{"time": "2026-11-22T19:06:49+00:00", "level": "INFO", "event": "reply_graded", "request_id": "714c4e1c6e5d", "judged_request": "9337fe141c06", "score": 5}
+{"time": "2026-11-22T19:06:49+00:00", "level": "INFO", "event": "request_finished", "request_id": "714c4e1c6e5d", "status": "ok", "duration_ms": 660, "model_calls": 1, "cost_usd": 0.001293}
+{"time": "2026-11-22T19:06:49+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "9337fe141c06", "rating": "up"}
+{"time": "2026-11-22T19:06:55+00:00", "level": "INFO", "event": "request_finished", "request_id": "83bef1218233", "status": "ok", "duration_ms": 5958, "model_calls": 8, "cost_usd": 0.001905}
+{"time": "2026-11-22T19:06:55+00:00", "level": "INFO", "event": "reply_graded", "request_id": "a529a7c02beb", "judged_request": "83bef1218233", "score": 4}
+{"time": "2026-11-22T19:06:55+00:00", "level": "INFO", "event": "request_finished", "request_id": "a529a7c02beb", "status": "ok", "duration_ms": 832, "model_calls": 1, "cost_usd": 0.00166}
+{"time": "2026-11-22T19:06:55+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "83bef1218233", "rating": "up"}
+{"time": "2026-11-22T19:07:00+00:00", "level": "INFO", "event": "request_finished", "request_id": "368021fd34cd", "status": "ok", "duration_ms": 4877, "model_calls": 7, "cost_usd": 0.001883}
+{"time": "2026-11-22T19:07:01+00:00", "level": "INFO", "event": "reply_graded", "request_id": "6e391b9fa93b", "judged_request": "368021fd34cd", "score": 5}
+{"time": "2026-11-22T19:07:01+00:00", "level": "INFO", "event": "request_finished", "request_id": "6e391b9fa93b", "status": "ok", "duration_ms": 976, "model_calls": 1, "cost_usd": 0.001742}
+{"time": "2026-11-22T19:07:01+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "368021fd34cd", "rating": "up"}
+{"time": "2026-11-22T19:07:06+00:00", "level": "INFO", "event": "audit:refund_issued", "request_id": "85e299fc9fd8", "order_id": "A1001", "amount": 79.0, "approved_by": "agent (under the automatic limit)"}
+{"time": "2026-11-22T19:07:07+00:00", "level": "INFO", "event": "request_finished", "request_id": "85e299fc9fd8", "status": "ok", "duration_ms": 5763, "model_calls": 7, "cost_usd": 0.001675}
+{"time": "2026-11-22T19:07:08+00:00", "level": "INFO", "event": "reply_graded", "request_id": "60af79cafe73", "judged_request": "85e299fc9fd8", "score": 5}
+{"time": "2026-11-22T19:07:08+00:00", "level": "INFO", "event": "request_finished", "request_id": "60af79cafe73", "status": "ok", "duration_ms": 779, "model_calls": 1, "cost_usd": 0.00139}
+{"time": "2026-11-22T19:07:08+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "85e299fc9fd8", "rating": "up"}
+{"time": "2026-11-22T19:07:13+00:00", "level": "INFO", "event": "request_finished", "request_id": "0eeb2eb57397", "status": "ok", "duration_ms": 5375, "model_calls": 7, "cost_usd": 0.001584}
+{"time": "2026-11-22T19:07:14+00:00", "level": "INFO", "event": "reply_graded", "request_id": "073ccdaca310", "judged_request": "0eeb2eb57397", "score": 5}
+{"time": "2026-11-22T19:07:14+00:00", "level": "INFO", "event": "request_finished", "request_id": "073ccdaca310", "status": "ok", "duration_ms": 874, "model_calls": 1, "cost_usd": 0.00163}
+{"time": "2026-11-22T19:07:14+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "0eeb2eb57397", "rating": "down"}
+{"time": "2026-11-22T19:07:18+00:00", "level": "INFO", "event": "audit:refund_held_for_approval", "request_id": "fb3d91698942", "order_id": "A1004", "amount": 250.0}
+{"time": "2026-11-22T19:07:21+00:00", "level": "INFO", "event": "request_finished", "request_id": "fb3d91698942", "status": "ok", "duration_ms": 6383, "model_calls": 8, "cost_usd": 0.001965}
+{"time": "2026-11-22T19:07:21+00:00", "level": "INFO", "event": "reply_graded", "request_id": "51da3fb33b2b", "judged_request": "fb3d91698942", "score": 5}
+{"time": "2026-11-22T19:07:21+00:00", "level": "INFO", "event": "request_finished", "request_id": "51da3fb33b2b", "status": "ok", "duration_ms": 831, "model_calls": 1, "cost_usd": 0.00169}
+{"time": "2026-11-22T19:07:21+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "fb3d91698942", "rating": "up"}
+{"time": "2026-11-22T19:07:26+00:00", "level": "INFO", "event": "request_finished", "request_id": "33dea240965d", "status": "ok", "duration_ms": 4526, "model_calls": 6, "cost_usd": 0.001523}
+{"time": "2026-11-22T19:07:27+00:00", "level": "INFO", "event": "reply_graded", "request_id": "6b5d52bf69ad", "judged_request": "33dea240965d", "score": 5}
+{"time": "2026-11-22T19:07:27+00:00", "level": "INFO", "event": "request_finished", "request_id": "6b5d52bf69ad", "status": "ok", "duration_ms": 830, "model_calls": 1, "cost_usd": 0.00124}
+{"time": "2026-11-22T19:07:31+00:00", "level": "INFO", "event": "request_finished", "request_id": "23910ac5e912", "status": "ok", "duration_ms": 4516, "model_calls": 6, "cost_usd": 0.001603}
+{"time": "2026-11-22T19:07:33+00:00", "level": "INFO", "event": "reply_graded", "request_id": "a0e5f8d3fec8", "judged_request": "23910ac5e912", "score": 3}
+{"time": "2026-11-22T19:07:33+00:00", "level": "INFO", "event": "request_finished", "request_id": "a0e5f8d3fec8", "status": "ok", "duration_ms": 1419, "model_calls": 1, "cost_usd": 0.001975}
+{"time": "2026-11-22T19:07:33+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "23910ac5e912", "rating": "up"}
+{"time": "2026-11-22T19:07:35+00:00", "level": "INFO", "event": "request_finished", "request_id": "3cc365063423", "status": "ok", "duration_ms": 2253, "model_calls": 2, "cost_usd": 5.8e-05}
+{"time": "2026-11-22T19:07:37+00:00", "level": "INFO", "event": "request_finished", "request_id": "fe920ca050d8", "status": "ok", "duration_ms": 1563, "model_calls": 2, "cost_usd": 7.7e-05}
+{"time": "2026-11-22T19:07:37+00:00", "level": "INFO", "event": "request_finished", "request_id": "b3165513c742", "status": "ok", "duration_ms": 0, "model_calls": 0, "cost_usd": 0.0}
+{"time": "2026-11-22T19:07:39+00:00", "level": "INFO", "event": "request_finished", "request_id": "484353e5e364", "status": "ok", "duration_ms": 2100, "model_calls": 3, "cost_usd": 9.4e-05}
+{"time": "2026-11-22T19:07:43+00:00", "level": "INFO", "event": "request_finished", "request_id": "3ceed2f31980", "status": "ok", "duration_ms": 4436, "model_calls": 6, "cost_usd": 0.001248}
+{"time": "2026-11-22T19:07:44+00:00", "level": "INFO", "event": "reply_graded", "request_id": "9d44e11c4fd5", "judged_request": "3ceed2f31980", "score": 5}
+{"time": "2026-11-22T19:07:44+00:00", "level": "INFO", "event": "request_finished", "request_id": "9d44e11c4fd5", "status": "ok", "duration_ms": 754, "model_calls": 1, "cost_usd": 0.00128}
+{"time": "2026-11-22T19:07:44+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "3ceed2f31980", "rating": "up"}
+{"time": "2026-11-22T19:07:49+00:00", "level": "INFO", "event": "request_finished", "request_id": "7a2584ebe915", "status": "ok", "duration_ms": 4836, "model_calls": 7, "cost_usd": 0.001923}
+{"time": "2026-11-22T19:07:50+00:00", "level": "INFO", "event": "reply_graded", "request_id": "1a23e0635e76", "judged_request": "7a2584ebe915", "score": 5}
+{"time": "2026-11-22T19:07:50+00:00", "level": "INFO", "event": "request_finished", "request_id": "1a23e0635e76", "status": "ok", "duration_ms": 1067, "model_calls": 1, "cost_usd": 0.002162}
+{"time": "2026-11-22T19:07:50+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "7a2584ebe915", "rating": "down"}
+{"time": "2026-11-22T19:07:54+00:00", "level": "INFO", "event": "request_finished", "request_id": "c51da8b54a2e", "status": "ok", "duration_ms": 3882, "model_calls": 7, "cost_usd": 0.001748}
+{"time": "2026-11-22T19:07:54+00:00", "level": "INFO", "event": "reply_graded", "request_id": "25180fdb75bb", "judged_request": "c51da8b54a2e", "score": 5}
+{"time": "2026-11-22T19:07:54+00:00", "level": "INFO", "event": "request_finished", "request_id": "25180fdb75bb", "status": "ok", "duration_ms": 659, "model_calls": 1, "cost_usd": 0.001403}
+{"time": "2026-11-22T19:07:54+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "c51da8b54a2e", "rating": "up"}
+{"time": "2026-11-22T19:07:54+00:00", "level": "INFO", "event": "audit:refund_approved", "request_id": "1a38e43c193a", "order_id": "A1004", "approver": "Priya (support lead)"}
+{"time": "2026-11-22T19:07:54+00:00", "level": "INFO", "event": "audit:refund_issued", "request_id": "1a38e43c193a", "order_id": "A1004", "amount": 250.0, "approved_by": "Priya (support lead)"}
+{"time": "2026-11-22T19:07:54+00:00", "level": "INFO", "event": "request_finished", "request_id": "1a38e43c193a", "status": "ok", "duration_ms": 2, "model_calls": 0, "cost_usd": 0.0}
+{"time": "2026-11-22T19:08:06+00:00", "level": "INFO", "event": "request_finished", "request_id": "379b16b2d313", "status": "ok", "duration_ms": 4454, "model_calls": 6, "cost_usd": 0.001373}
+{"time": "2026-11-22T19:08:07+00:00", "level": "INFO", "event": "reply_graded", "request_id": "4b8ea80808cb", "judged_request": "379b16b2d313", "score": 5}
+{"time": "2026-11-22T19:08:07+00:00", "level": "INFO", "event": "request_finished", "request_id": "4b8ea80808cb", "status": "ok", "duration_ms": 858, "model_calls": 1, "cost_usd": 0.00133}
+{"time": "2026-11-22T19:08:07+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "379b16b2d313", "rating": "up"}
+{"time": "2026-11-22T19:08:12+00:00", "level": "INFO", "event": "request_finished", "request_id": "ac6ff84306f6", "status": "ok", "duration_ms": 4462, "model_calls": 8, "cost_usd": 0.001608}
+{"time": "2026-11-22T19:08:13+00:00", "level": "INFO", "event": "reply_graded", "request_id": "27b38b0b9c8d", "judged_request": "ac6ff84306f6", "score": 5}
+{"time": "2026-11-22T19:08:13+00:00", "level": "INFO", "event": "request_finished", "request_id": "27b38b0b9c8d", "status": "ok", "duration_ms": 1002, "model_calls": 1, "cost_usd": 0.001865}
+{"time": "2026-11-22T19:08:13+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "ac6ff84306f6", "rating": "up"}
+{"time": "2026-11-22T19:08:17+00:00", "level": "INFO", "event": "request_finished", "request_id": "a13c371e2177", "status": "ok", "duration_ms": 4235, "model_calls": 7, "cost_usd": 0.001748}
+{"time": "2026-11-22T19:08:18+00:00", "level": "INFO", "event": "reply_graded", "request_id": "c6a157c98551", "judged_request": "a13c371e2177", "score": 5}
+{"time": "2026-11-22T19:08:18+00:00", "level": "INFO", "event": "request_finished", "request_id": "c6a157c98551", "status": "ok", "duration_ms": 903, "model_calls": 1, "cost_usd": 0.001788}
+{"time": "2026-11-22T19:08:18+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "a13c371e2177", "rating": "up"}
+{"time": "2026-11-22T19:08:22+00:00", "level": "INFO", "event": "audit:refund_issued", "request_id": "ae49ac468721", "order_id": "A1001", "amount": 79.0, "approved_by": "agent (under the automatic limit)"}
+{"time": "2026-11-22T19:08:24+00:00", "level": "INFO", "event": "request_finished", "request_id": "ae49ac468721", "status": "ok", "duration_ms": 6162, "model_calls": 7, "cost_usd": 0.001855}
+{"time": "2026-11-22T19:08:25+00:00", "level": "INFO", "event": "reply_graded", "request_id": "1ce1b21bb0c3", "judged_request": "ae49ac468721", "score": 5}
+{"time": "2026-11-22T19:08:25+00:00", "level": "INFO", "event": "request_finished", "request_id": "1ce1b21bb0c3", "status": "ok", "duration_ms": 781, "model_calls": 1, "cost_usd": 0.00161}
+{"time": "2026-11-22T19:08:25+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "ae49ac468721", "rating": "up"}
+{"time": "2026-11-22T19:08:30+00:00", "level": "INFO", "event": "request_finished", "request_id": "707b0ae9e05f", "status": "ok", "duration_ms": 5214, "model_calls": 7, "cost_usd": 0.001772}
+{"time": "2026-11-22T19:08:31+00:00", "level": "INFO", "event": "reply_graded", "request_id": "dacd2318f869", "judged_request": "707b0ae9e05f", "score": 5}
+{"time": "2026-11-22T19:08:31+00:00", "level": "INFO", "event": "request_finished", "request_id": "dacd2318f869", "status": "ok", "duration_ms": 871, "model_calls": 1, "cost_usd": 0.001638}
+{"time": "2026-11-22T19:08:31+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "707b0ae9e05f", "rating": "down"}
+{"time": "2026-11-22T19:08:36+00:00", "level": "INFO", "event": "audit:refund_held_for_approval", "request_id": "904003a80e72", "order_id": "A1004", "amount": 250.0}
+{"time": "2026-11-22T19:08:37+00:00", "level": "INFO", "event": "request_finished", "request_id": "904003a80e72", "status": "ok", "duration_ms": 6387, "model_calls": 8, "cost_usd": 0.002018}
+{"time": "2026-11-22T19:08:38+00:00", "level": "INFO", "event": "reply_graded", "request_id": "e9691d816ceb", "judged_request": "904003a80e72", "score": 5}
+{"time": "2026-11-22T19:08:38+00:00", "level": "INFO", "event": "request_finished", "request_id": "e9691d816ceb", "status": "ok", "duration_ms": 974, "model_calls": 1, "cost_usd": 0.001795}
+{"time": "2026-11-22T19:08:38+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "904003a80e72", "rating": "up"}
+{"time": "2026-11-22T19:08:43+00:00", "level": "INFO", "event": "request_finished", "request_id": "c07f0f2d693c", "status": "ok", "duration_ms": 4569, "model_calls": 6, "cost_usd": 0.00145}
+{"time": "2026-11-22T19:08:44+00:00", "level": "INFO", "event": "reply_graded", "request_id": "a1b763cef2c6", "judged_request": "c07f0f2d693c", "score": 5}
+{"time": "2026-11-22T19:08:44+00:00", "level": "INFO", "event": "request_finished", "request_id": "a1b763cef2c6", "status": "ok", "duration_ms": 879, "model_calls": 1, "cost_usd": 0.00137}
+{"time": "2026-11-22T19:08:51+00:00", "level": "INFO", "event": "request_finished", "request_id": "ac125414b82f", "status": "ok", "duration_ms": 6656, "model_calls": 8, "cost_usd": 0.003442}
+{"time": "2026-11-22T19:08:51+00:00", "level": "INFO", "event": "reply_graded", "request_id": "46452c2b80f0", "judged_request": "ac125414b82f", "score": 3}
+{"time": "2026-11-22T19:08:51+00:00", "level": "INFO", "event": "request_finished", "request_id": "46452c2b80f0", "status": "ok", "duration_ms": 823, "model_calls": 1, "cost_usd": 0.001543}
+{"time": "2026-11-22T19:08:51+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "ac125414b82f", "rating": "up"}
+{"time": "2026-11-22T19:08:53+00:00", "level": "INFO", "event": "request_finished", "request_id": "ef982fc69c02", "status": "ok", "duration_ms": 1394, "model_calls": 2, "cost_usd": 6.1e-05}
+{"time": "2026-11-22T19:08:54+00:00", "level": "INFO", "event": "request_finished", "request_id": "360e8dbbc3eb", "status": "ok", "duration_ms": 1099, "model_calls": 2, "cost_usd": 5.9e-05}
+{"time": "2026-11-22T19:08:54+00:00", "level": "INFO", "event": "request_finished", "request_id": "4f54bced858f", "status": "ok", "duration_ms": 0, "model_calls": 0, "cost_usd": 0.0}
+{"time": "2026-11-22T19:08:56+00:00", "level": "INFO", "event": "request_finished", "request_id": "f7f31fb76d62", "status": "ok", "duration_ms": 2144, "model_calls": 3, "cost_usd": 9.7e-05}
+{"time": "2026-11-22T19:09:00+00:00", "level": "INFO", "event": "request_finished", "request_id": "262dd8e49042", "status": "ok", "duration_ms": 4260, "model_calls": 6, "cost_usd": 0.001472}
+{"time": "2026-11-22T19:09:01+00:00", "level": "INFO", "event": "reply_graded", "request_id": "8f64dd12ac85", "judged_request": "262dd8e49042", "score": 5}
+{"time": "2026-11-22T19:09:01+00:00", "level": "INFO", "event": "request_finished", "request_id": "8f64dd12ac85", "status": "ok", "duration_ms": 937, "model_calls": 1, "cost_usd": 0.001468}
+{"time": "2026-11-22T19:09:01+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "262dd8e49042", "rating": "up"}
+{"time": "2026-11-22T19:09:06+00:00", "level": "INFO", "event": "request_finished", "request_id": "9d8ebf424424", "status": "ok", "duration_ms": 4903, "model_calls": 7, "cost_usd": 0.001794}
+{"time": "2026-11-22T19:09:07+00:00", "level": "INFO", "event": "reply_graded", "request_id": "fcc0c3ec9a4e", "judged_request": "9d8ebf424424", "score": 4}
+{"time": "2026-11-22T19:09:07+00:00", "level": "INFO", "event": "request_finished", "request_id": "fcc0c3ec9a4e", "status": "ok", "duration_ms": 1193, "model_calls": 1, "cost_usd": 0.00206}
+{"time": "2026-11-22T19:09:07+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "9d8ebf424424", "rating": "down"}
+{"time": "2026-11-22T19:09:11+00:00", "level": "INFO", "event": "request_finished", "request_id": "b7dcc12d4759", "status": "ok", "duration_ms": 3557, "model_calls": 7, "cost_usd": 0.001487}
+{"time": "2026-11-22T19:09:12+00:00", "level": "INFO", "event": "reply_graded", "request_id": "1897356e8484", "judged_request": "b7dcc12d4759", "score": 5}
+{"time": "2026-11-22T19:09:12+00:00", "level": "INFO", "event": "request_finished", "request_id": "1897356e8484", "status": "ok", "duration_ms": 701, "model_calls": 1, "cost_usd": 0.001308}
+{"time": "2026-11-22T19:09:12+00:00", "level": "INFO", "event": "feedback_received", "judged_request": "b7dcc12d4759", "rating": "up"}
+{"time": "2026-11-22T19:09:12+00:00", "level": "INFO", "event": "audit:refund_approved", "request_id": "c0e08ed101cb", "order_id": "A1004", "approver": "Priya (support lead)"}
+{"time": "2026-11-22T19:09:12+00:00", "level": "INFO", "event": "audit:refund_issued", "request_id": "c0e08ed101cb", "order_id": "A1004", "amount": 250.0, "approved_by": "Priya (support lead)"}
+{"time": "2026-11-22T19:09:12+00:00", "level": "INFO", "event": "request_finished", "request_id": "c0e08ed101cb", "status": "ok", "duration_ms": 2, "model_calls": 0, "cost_usd": 0.0}

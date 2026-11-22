@@ -1,0 +1,20 @@
+# Module 07: Production & Observability
+#
+# This module uses the SAME environment as Modules 01 to 05 (the main `venv`). Only three packages are new:
+# fastapi (the web framework), uvicorn (the server that runs it) and httpx (a web client, used by the test client).
+#
+#   pip install -r "Production and Observability/requirements.txt"
+#
+# The versions are the ones this module was tested with.
+
+openai==3.57.0
+python-dotenv==1.2.4
+pydantic==2.14.4
+
+fastapi==0.165.0
+uvicorn==0.54.0
+httpx==0.28.1
+
+# To run the notebooks
+ipykernel
+nbconvert
