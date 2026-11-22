@@ -1,0 +1,29 @@
+# Module 06: Agent Frameworks
+#
+# Use a SEPARATE virtual environment for this module. Frameworks pull in many packages, and they
+# need different versions of the `openai` library than the earlier modules, so mixing them can break both.
+#
+#   python -m venv venv-frameworks
+#   .\venv-frameworks\Scripts\Activate.ps1          (macOS/Linux: source venv-frameworks/bin/activate)
+#   pip install -r "Agent Frameworks/requirements.txt"
+#
+# The versions are PINNED to the ones this module was tested with. Agent frameworks change quickly
+
+openai==2.54.0
+python-dotenv==1.2.4
+pydantic==2.12.5
+
+# OpenAI Agents SDK
+openai-agents==0.20.0
+
+# LangGraph (and the small LangChain pieces it uses for models and agents)
+langgraph==1.2.24
+langchain==1.5.2
+langchain-openai==1.8.5
+
+# CrewAI (the heaviest install of the three)
+crewai==1.15.44
+
+# To run the notebooks
+ipykernel
+nbconvert

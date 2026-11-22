@@ -7,3 +7,6 @@ __pycache__/
 # Memory files created when running Module 03
 customer_memory.json
 support_memory.json
+
+# Separate environment for Module 06 (agent frameworks)
+venv-frameworks/
