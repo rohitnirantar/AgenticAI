@@ -1,0 +1,35 @@
+# Capstone Project
+#
+# Use the SAME separate environment as Module 06 (venv-frameworks). The capstone needs the three frameworks
+# AND the web service from Module 07, so this file is the Module 06 list plus three packages.
+#
+#   python -m venv venv-frameworks
+#   .\venv-frameworks\Scripts\Activate.ps1          (macOS/Linux: source venv-frameworks/bin/activate)
+#   pip install -r "Capstone Project/requirements.txt"
+#
+# The versions are PINNED to the ones this project was tested with. Agent frameworks change quickly
+# (the OpenAI Agents SDK is still below version 1.0), so unpinned installs can break the code.
+
+openai==2.54.0
+python-dotenv==1.2.4
+pydantic==2.12.5
+
+# OpenAI Agents SDK
+openai-agents==0.20.0
+
+# LangGraph (and the small LangChain pieces it uses for models and agents)
+langgraph==1.2.24
+langchain==1.5.2
+langchain-openai==1.8.5
+
+# CrewAI (the heaviest install of the three)
+crewai==1.15.44
+
+# The web service (from Module 07)
+fastapi==0.165.0
+uvicorn==0.54.0
+httpx==0.28.1
+
+# To run the notebooks
+ipykernel
+nbconvert

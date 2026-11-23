@@ -1,0 +1,35 @@
+# An EXAMPLE of a release gate for the capstone: run the scoreboard automatically, and block the change if the
+# chosen engine falls below the pass rate. (Same idea as Module 07. It is saved as .example so it does NOT run by itself.)
+#
+# To switch it on:
+#   1. copy it to .github/workflows/capstone.yml at the ROOT of your repository
+#   2. in GitHub: Settings > Secrets and variables > Actions > New repository secret, name it OPENAI_API_KEY
+#   3. check that the versions of the actions below are still current
+#
+# One engine, 2 runs per case, is about 100 small model calls (a few cents).
+
+name: Capstone scoreboard
+
+on:
+  pull_request:
+    paths:
+      - "Capstone Project/**"
+  workflow_dispatch:
+
+jobs:
+  scoreboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install the dependencies
+        run: pip install -r "Capstone Project/requirements.txt"
+
+      - name: Run the scoreboard for the engine we ship (exits with an error below the threshold)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python "Capstone Project/scoreboard.py" langgraph 2

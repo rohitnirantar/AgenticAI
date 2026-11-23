@@ -58,7 +58,7 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 | **05** | **[Agent Guardrails & Evals](Agent%20Guardrails%20and%20Evals/README_Concepts.md)** | Input, tool and output guardrails, human approval, step and token budgets, test suites (evals), and LLM-as-judge | 
 | **06** | **[Agent Frameworks](Agent%20Frameworks/README_Concepts.md)** | Types of frameworks, why they exist, what they add and cost, with the OpenAI Agents SDK, LangGraph and CrewAI | 
 | **07** | **[Production & Observability](Production%20and%20Observability/README_Concepts.md)** | FastAPI service, reliability, structured logs and traces, cost, speed and quality metrics, alerts, closing the loop with evals, and going live without Docker |
-| **Capstone** | **One project, built in each framework** *(coming)* | The support desk rebuilt in each framework, scored with the same evals and compared |
+| **Capstone** | **[One desk, four engines, one scoreboard](Capstone%20Project/README_Concepts.md)** | The guarded, observable support desk built in the OpenAI Agents SDK, LangGraph and CrewAI (next to the hand-built one), scored with the same evals, compared on real numbers, and run as a service |
 
 ---
 
@@ -92,12 +92,13 @@ AgenticAI/
 ├── Agent Guardrails and Evals/     # Module 05: guardrails, evals, judges (+ guarded desk and eval scripts)
 ├── Agent Frameworks/               # Module 06: Agents SDK, LangGraph, CrewAI (+ its own requirements.txt)
 ├── Production and Observability/   # Module 07: API service, reliability, tracing, metrics, alerts (+ service and ops scripts)
+├── Capstone Project/               # Capstone: the guarded, observable desk in each framework, scoreboard, service (+ one file per framework)
 ├── .env.example                    # Template for required environment variables
 ├── requirements.txt                # Python dependencies for Modules 01 to 05
 └── README.md                       # You are here!
 ```
 
-Every module folder has a `README_Concepts.md`. Read it first, then open the notebooks in order. Module 06 uses its own environment (`venv-frameworks`), because agent frameworks need different package versions. Module 07 uses the main environment plus three small packages. The capstone will be added when it is finished.
+Every module folder has a `README_Concepts.md`. Read it first, then open the notebooks in order. Module 06 uses its own environment (`venv-frameworks`), because agent frameworks need different package versions. Module 07 uses the main environment plus three small packages. The capstone uses the Module 06 environment (`venv-frameworks`) plus the same three packages.
 
 ---
 
@@ -145,10 +146,11 @@ python "Multi-Agent Architectures/support_desk.py"
 
 ## 🏆 Capstone Project
 
-The course follows one online shop and its **customer support desk** from a single API call to a multi-agent system with guardrails. The capstone builds the same support desk **once in each popular framework** (LangGraph, CrewAI and the OpenAI Agents SDK), next to the plain-Python version from Module 04:
-- Every version is scored with the **same evals** from Module 05, so the comparison is based on measurements.
-- The comparison covers quality, cost, speed, and how much code each one needs.
-- Each version is wrapped in the Module 07 service, with tracing and cost tracking, so the comparison also covers what it costs to run and how easy it is to observe.
+The course follows one online shop and its **customer support desk** from a single API call to a multi-agent system with guardrails, and then to a service you can run and observe. The capstone builds the same support desk **once in each popular framework** (the OpenAI Agents SDK, LangGraph and CrewAI), next to the hand-built version from Module 04:
+- Every version has the **same guardrails** (Module 05) and the **same tracing** (Module 07), and is scored with the **same evals**, so the comparison is based on measurements.
+- The comparison covers correctness, safety, cost, speed, how much code each one needs, and how much work it took to make each one observable.
+- Each framework also has **one separate file that runs the whole desk end to end** (`capstone_sdk.py`, `capstone_langgraph.py`, `capstone_crewai.py`).
+- The chosen engine runs behind the Module 07 service, selected with one setting.
 
 ---
 

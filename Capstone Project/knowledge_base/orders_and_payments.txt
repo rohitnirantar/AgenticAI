@@ -1,0 +1,5 @@
+Payment methods: We accept credit cards, debit cards and UPI.
+
+Cancelling an order: You can cancel an order for free until it ships. After it ships, you need to return it instead.
+
+Changing the delivery address: You can change the address until the order ships. Email support with your order number and the new address.
