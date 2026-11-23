@@ -1,0 +1,7 @@
+Refund window: You can ask for a refund within 30 days of delivery. After 30 days we cannot refund an order, but faulty items are still covered by the warranty.
+
+Opened items: A faulty item can be returned even if it is opened. If an opened item is not faulty, we charge a 10% restocking fee.
+
+How refunds are paid: Refunds go back to the original payment method. The money usually arrives 5 to 7 business days after we receive the item.
+
+Return shipping: Return shipping is free for faulty items. For any other return, the customer pays the return shipping cost.

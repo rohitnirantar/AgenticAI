@@ -1,0 +1,7 @@
+# Module 09 - Cost Optimization
+# The main environment of the course is enough.
+openai
+pydantic
+python-dotenv
+jupyter
+ipykernel

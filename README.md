@@ -44,6 +44,10 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 - **Evaluation & Guardrails**: Defending against prompt injection and data leaks, limiting what agents can do, and measuring accuracy with evals.
 - **Agent Frameworks**: What frameworks give you, what they cost, and how the OpenAI Agents SDK, LangGraph and CrewAI compare on the same support desk.
 - **Production & Observability**: Putting the agent behind a FastAPI service, making it reliable (retries, idempotency, budgets, fallbacks), tracing every request, tracking cost, speed and quality, alerts, and going live without Docker.
+- **Persistent State**: Keeping the agent's facts in a real database (SQLite): transactions, constraints that stop double refunds, memory per customer, and surviving a crash.
+- **Cost Optimization**: Measuring where the money goes, then routing, caching, trimming and batching, without letting quality drop.
+- **Red Teaming**: Attacking your own agent with a human-written library and an attacker AI, then making the important rules impossible to break in code.
+- **MCP**: Building and using Model Context Protocol servers, and securing them against tool poisoning.
 
 ---
 
@@ -59,6 +63,12 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 | **06** | **[Agent Frameworks](Agent%20Frameworks/README_Concepts.md)** | Types of frameworks, why they exist, what they add and cost, with the OpenAI Agents SDK, LangGraph and CrewAI | 
 | **07** | **[Production & Observability](Production%20and%20Observability/README_Concepts.md)** | FastAPI service, reliability, structured logs and traces, cost, speed and quality metrics, alerts, closing the loop with evals, and going live without Docker |
 | **Capstone** | **[One desk, four engines, one scoreboard](Capstone%20Project/README_Concepts.md)** | The guarded, observable support desk built in the OpenAI Agents SDK, LangGraph and CrewAI (next to the hand-built one), scored with the same evals, compared on real numbers, and run as a service |
+| **08** | **[Persistent State & Databases](Persistent%20State%20and%20Databases/README_Concepts.md)** | SQLite as the desk's memory: transactions, UNIQUE rules, a real race condition, approvals that survive a restart, a process killed mid-refund, backups and migrations |
+| **09** | **[Cost Optimization](Cost%20Optimization/README_Concepts.md)** | Where the tokens go, model routing, prompt caching, exact and semantic caches, trimming prompts, the Batch API, all measured against a test set |
+| **10** | **[Red Teaming](Red%20Teaming/README_Concepts.md)** | Attacking your own agent on purpose: an attack library, an attacker AI, naive vs hardened desks, regression tests and a release gate |
+| **11** | **[MCP Tool Servers](MCP%20Tool%20Servers/README_Concepts.md)** | The Model Context Protocol: build a server, use it from your own agent and the Agents SDK, and defend against poisoned third-party servers |
+
+Modules **08 to 11** are deep dives. Each one runs on your laptop with the main environment and an OpenAI key, and each keeps using the same shop. Do them in any order after Module 05 (Module 11 needs Module 02, and Module 10 builds on Module 05).
 
 ---
 
@@ -69,6 +79,7 @@ This repository provides step-by-step code, architectural blueprints, and reprod
 - **LLM Provider**: OpenAI (Module 01 also shows Gemini and OpenRouter calls)
 - **Agent Frameworks** *(Module 06 and the capstone)*: OpenAI Agents SDK, LangGraph, CrewAI. They need their **own virtual environment** with pinned versions (see the Module 06 page).
 - **Production & Observability** *(Module 07)*: FastAPI and uvicorn, with structured logging and tracing built by hand in plain Python (no Docker needed). Optional: OpenAI's own tracing dashboard.
+- **Deep dives** *(Modules 08 to 11)*: SQLite (part of Python), the `openai` package, `pydantic`, and the `mcp` package for Module 11. No Docker, no cloud account, no extra services.
 
 ---
 
@@ -93,12 +104,16 @@ AgenticAI/
 ├── Agent Frameworks/               # Module 06: Agents SDK, LangGraph, CrewAI (+ its own requirements.txt)
 ├── Production and Observability/   # Module 07: API service, reliability, tracing, metrics, alerts (+ service and ops scripts)
 ├── Capstone Project/               # Capstone: the guarded, observable desk in each framework, scoreboard, service (+ one file per framework)
+├── Persistent State and Databases/ # Module 08: SQLite, transactions, memory, crash test (+ desk and approval scripts)
+├── Cost Optimization/              # Module 09: routing, caching, trimming, batching (+ cost report script)
+├── Red Teaming/                    # Module 10: attack library, attacker AI, hardened desk (+ red team script with a release gate)
+├── MCP Tool Servers/               # Module 11: MCP server, client, Agents SDK use, security gate (+ desk and vetting scripts)
 ├── .env.example                    # Template for required environment variables
 ├── requirements.txt                # Python dependencies for Modules 01 to 05
 └── README.md                       # You are here!
 ```
 
-Every module folder has a `README_Concepts.md`. Read it first, then open the notebooks in order. Module 06 uses its own environment (`venv-frameworks`), because agent frameworks need different package versions. Module 07 uses the main environment plus three small packages. The capstone uses the Module 06 environment (`venv-frameworks`) plus the same three packages.
+Every module folder has a `README_Concepts.md`. Read it first, then open the notebooks in order. Module 06 uses its own environment (`venv-frameworks`), because agent frameworks need different package versions. Module 07 uses the main environment plus three small packages. The capstone uses the Module 06 environment (`venv-frameworks`) plus the same three packages. **Modules 08 to 10 need nothing beyond the main environment.** **Module 11** also needs the `mcp` package (`pip install -r "MCP Tool Servers/requirements.txt"`); its Agents SDK example uses `openai-agents`, which that file lists too.
 
 ---
 

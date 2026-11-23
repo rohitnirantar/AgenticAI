@@ -160,6 +160,8 @@ You need `OPENAI_API_KEY` in your `.env` file. Everything together costs well un
 
 ---
 
-**You have reached the end of the course.** You started with one API call, and now you can build an agent from scratch, guard it, measure it, observe it, put it behind an API, and **choose a framework with evidence instead of fashion**.
+**You have reached the end of the core course.** You started with one API call, and now you can build an agent from scratch, guard it, measure it, observe it, put it behind an API, and **choose a framework with evidence instead of fashion**.
+
+**Four deep dives follow**, each on the same shop and each runnable on your laptop: [Module 08 · Persistent State & Databases](../Persistent%20State%20and%20Databases/README_Concepts.md), [Module 09 · Cost Optimization](../Cost%20Optimization/README_Concepts.md), [Module 10 · Red Teaming](../Red%20Teaming/README_Concepts.md) and [Module 11 · MCP Tool Servers](../MCP%20Tool%20Servers/README_Concepts.md).
 
 *Agentic AI: From Zero to Live Production · Capstone · [Rohit Nirantar](https://github.com/rohitnirantar)*

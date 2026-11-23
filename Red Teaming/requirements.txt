@@ -1,0 +1,7 @@
+# Module 10 - Red Teaming
+# The main environment of the course is enough.
+openai
+pydantic
+python-dotenv
+jupyter
+ipykernel

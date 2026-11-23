@@ -14,3 +14,10 @@ venv-frameworks/
 # Logs written by the Module 07 service (sample_logs/ IS committed on purpose)
 Production and Observability/logs/
 Capstone Project/logs/
+
+# Databases created when running Module 08 (the notebooks use throwaway files)
+Persistent State and Databases/*.db
+Persistent State and Databases/*.db-journal
+
+# Files written when running Module 09 (batch input files)
+Cost Optimization/logs/

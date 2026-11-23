@@ -1,0 +1,6 @@
+# Module 08 - Persistent State & Databases
+# The main environment of the course is enough. SQLite is part of Python (the sqlite3 module).
+openai
+python-dotenv
+jupyter
+ipykernel
